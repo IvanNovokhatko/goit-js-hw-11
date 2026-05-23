@@ -34,14 +34,11 @@ const onMyFormSubmit = (event) => {
     const searchWord = myFormInput.value.trim();
 
     getImagesByQuery(searchWord)
-        .then((response) => {
-            if (response.data.hits.length === 0) {
+        .then((data) => {
+            if (data.hits.length === 0) {
       throw new Error("EMPTY_RESULT");
             }
-            
-      return response.data
-        })
-        .then((data) => {
+
             createGallery(data.hits);
         })
         .catch((error) => {
