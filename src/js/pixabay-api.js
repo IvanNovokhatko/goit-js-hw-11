@@ -29,3 +29,32 @@ export function getImagesByQuery(query) {
             throw error; 
         });
 };
+
+
+// Notifications functions
+export function showEmptyWarning() {
+    iziToast.show({
+        message: 'Sorry, there are no images matching your search query. Please try again!',
+        messageColor: 'white',
+        backgroundColor: 'red',
+        position: 'topRight',
+    });
+}
+
+export function showValidationError() {
+    iziToast.show({
+        message: 'Please, fill out the search field!',
+        messageColor: 'white',
+        backgroundColor: 'red',
+        position: 'topRight',
+    });
+}
+
+export function showGenericError() {
+    iziToast.show({
+        message: 'Something went wrong',
+        messageColor: 'white',
+        backgroundColor: 'red',
+        position: 'topRight',
+    });
+}

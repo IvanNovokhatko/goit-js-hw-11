@@ -1,10 +1,10 @@
 // #region Imports
 
 // Request function
-import { getImagesByQuery } from "./js/pixabay-api"
+import { getImagesByQuery, showEmptyWarning, showValidationError, showGenericError } from "./js/pixabay-api.js"
 
 // Remder functions
-import {createGallery, clearGallery, showLoader, hideLoader, showEmptyWarning, showValidationError, showGenericError} from "./js/render-functions.js"
+import {createGallery, clearGallery, showLoader, hideLoader} from "./js/render-functions.js"
 
 // #endregion Imports
 
