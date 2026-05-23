@@ -36,13 +36,6 @@ const onMyFormSubmit = (event) => {
             const message = error.message === "EMPTY_RESULT" 
             ? showEmptyWarning()
             : showGenericError();
-
-            iziToast.show({
-            message: message,
-            messageColor: 'white',
-            backgroundColor: 'red',
-            position: 'topRight',
-            });
       
       return []; 
         }).finally(() => {
